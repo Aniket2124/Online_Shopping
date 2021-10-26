@@ -1,0 +1,17 @@
+/venv/*
+/env/*
+.env
+#ignoring idea
+/.idea/*
+/.vscode/*
+#ignoring database
+/db.sqlite3/*
+
+#ignoring migrations
+/earthmovers/migrations/*
+
+#ignoring pycache
+*.__pycache__
+/earthmovers/migrations/__pycache__/*
+/core/__pycache__/*
+/earthmovers/__pycache__/*
