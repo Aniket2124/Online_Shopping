@@ -10,6 +10,10 @@
 #ignoring migrations
 /earthmovers/migrations/*
 
+
+
+
+
 #ignoring pycache
 *.__pycache__
 /earthmovers/migrations/__pycache__/*
