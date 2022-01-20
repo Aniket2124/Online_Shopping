@@ -8,14 +8,14 @@
 /db.sqlite3/*
 
 #ignoring migrations
-/earthmovers/migrations/*
+/app/migrations/*
 
 
 
 
 
 #ignoring pycache
-*.__pycache__
-/earthmovers/migrations/__pycache__/*
-/core/__pycache__/*
-/earthmovers/__pycache__/*
+__pycache__/
+/app/migrations/__pycache__/*
+/Online_shopping/__pycache__/*
+/app/__pycache__/*

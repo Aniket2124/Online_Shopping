@@ -1,7 +1,9 @@
+from django.contrib import messages
 from unicodedata import category
 from django.shortcuts import render
 from .models import Customer,Product,Cart,OrderPlaced
 from django.views import View
+from .forms import CustomerRegistrationForm
 
 # def home(request):
 #  return render(request, 'app/home.html')
@@ -72,8 +74,20 @@ def laptop(request,data=None):
 def login(request):
  return render(request, 'app/login.html')
 
-def customerregistration(request):
- return render(request, 'app/customerregistration.html')
+# def customerregistration(request):
+#  return render(request, 'app/customerregistration.html')
+
+class customerRegistrationView(View):
+    def get(self,request):
+        form = CustomerRegistrationForm()
+        return render(request, 'app/customerregistration.html', {'form':form})
+
+    def post(self,request):
+        form = CustomerRegistrationForm(request.POST)
+        if form.is_valid():
+            messages.success(request, 'Registered Successfully !!')
+            form.save()
+        return render(request, 'app/customerregistration.html', {'form':form})
 
 def checkout(request):
  return render(request, 'app/checkout.html')
